@@ -96,7 +96,7 @@ public class Lab6_P1_ErickHernandez {
                     
                     int [] resultado = getTotalPrimeCount(arreglo);
                     
-                    System.out.print("No. de divisores primos: ");
+                    System.out.print("# de divisores primos: ");
                     imprimir2(resultado);
                     System.out.println("");
                     break;
