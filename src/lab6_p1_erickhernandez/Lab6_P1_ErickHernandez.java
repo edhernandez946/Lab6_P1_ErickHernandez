@@ -36,10 +36,10 @@ public class Lab6_P1_ErickHernandez {
                     char [] array2 = genRandCharArray(size2);
                     
                     System.out.println("Conjuntos generados: ");
-                    System.out.print("SET1: ");
+                    System.out.print("Set 1: ");
                     imprimir(array1);
                     System.out.println("");
-                    System.out.print("SET2: ");
+                    System.out.print("Set 2: ");
                     imprimir(array2);
                     System.out.println("");
                     
@@ -75,7 +75,7 @@ public class Lab6_P1_ErickHernandez {
                     System.out.println("Cuantos primos tienes?");
                     System.out.println("Ingrese el size de su arreglo");
                     int size = sc.nextInt();
-                    while (size < 2){//valida que el size sea mayor a 1
+                    while (size < 2){
                         System.out.println("Size del arreglo debe ser mayor a 1");
                         size = sc.nextInt();
                     }
@@ -107,43 +107,15 @@ public class Lab6_P1_ErickHernandez {
             System.out.println("");
         }
         
-        System.out.println("Salio del programa");
+        System.out.println("Fin del programa");
     }
     
     public static void menu(){
         System.out.println("1. Conjuntos");
-        System.out.println("2. Cuantos primos tienes?");
-        System.out.println("Cualquier otro numero sale del programa");
+        System.out.println("2. Numeros Primos");
+        System.out.println("3. Salir del Programa");
         
         System.out.println("Ingresar opcion");
-    }
-    
-    public static void imprimir(char [] arreglo){
-        for (int j = 0; j < arreglo.length; j++){
-            System.out.print("[" + arreglo [j] + "]");
-        }
-    }
-    
-    public static void imprimir2(int [] arreglo){
-        for (int j = 0; j < arreglo.length; j++){
-            System.out.print("[" + arreglo [j] + "]");
-        }
-    }
-    
-    public static void imprimir3(char [] arreglo){
-        char [] unicos = new char [arreglo.length];
-        int cuenta = 0;
-        
-        for (int i = 65; i <= 73; i++){
-            for (int j = 0; j < arreglo.length; j++){
-                if ((int)arreglo[j] == i){
-                    cuenta++;
-                    unicos [j] = arreglo [j];
-                }
-            }
-        }
-        
-        imprimir(unicos);
     }
     
     public static char [] genRandCharArray(int size){
@@ -309,5 +281,33 @@ public class Lab6_P1_ErickHernandez {
         }
         
         return res;
+    }
+
+    public static void imprimir(char [] arreglo){
+        for (int j = 0; j < arreglo.length; j++){
+            System.out.print("[" + arreglo [j] + "]");
+        }
+    }
+    
+    public static void imprimir2(int [] arreglo){
+        for (int j = 0; j < arreglo.length; j++){
+            System.out.print("[" + arreglo [j] + "]");
+        }
+    }
+    
+    public static void imprimir3(char [] arreglo){
+        char [] unicos = new char [arreglo.length];
+        int cuenta = 0;
+        
+        for (int i = 65; i <= 73; i++){
+            for (int j = 0; j < arreglo.length; j++){
+                if ((int)arreglo[j] == i){
+                    cuenta++;
+                    unicos [j] = arreglo [j];
+                }
+            }
+        }
+        
+        imprimir(unicos);
     }
 }
